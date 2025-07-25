@@ -1,0 +1,182 @@
+/* Custom CSS for additional styling and animations */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom gradient background animation */
+.gradient-bg {
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Floating elements animation */
+.floating-element {
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-element:nth-child(2) {
+    animation-delay: -1s;
+}
+
+.floating-element:nth-child(3) {
+    animation-delay: -2s;
+}
+
+.floating-element:nth-child(4) {
+    animation-delay: -0.5s;
+}
+
+.floating-element:nth-child(5) {
+    animation-delay: -1.5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Framework cards floating animation */
+.framework-card {
+    animation: floatSlow 4s ease-in-out infinite;
+}
+
+.framework-card:nth-child(2) {
+    animation-delay: -1s;
+}
+
+.framework-card:nth-child(3) {
+    animation-delay: -2s;
+}
+
+.framework-card:nth-child(4) {
+    animation-delay: -3s;
+}
+
+@keyframes floatSlow {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Hover effects for cards */
+.feature-card:hover,
+.benefit-card:hover,
+.framework-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Code syntax highlighting colors */
+.code-content {
+    color: #e2e8f0;
+}
+
+/* Button hover effects */
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* Loading animation for page entrance */
+body {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .floating-element {
+        display: none;
+    }
+    
+    .framework-card {
+        animation: none;
+    }
+}
+
+/* Focus states for accessibility */
+button:focus,
+a:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Text selection styling */
+::selection {
+    background: #3b82f6;
+    color: white;
+}
+
+/* Backdrop blur support */
+@supports (backdrop-filter: blur(10px)) {
+    .backdrop-blur-sm {
+        backdrop-filter: blur(4px);
+    }
+    
+    .backdrop-blur-lg {
+        backdrop-filter: blur(16px);
+    }
+}
+
+/* Print styles */
+@media print {
+    .floating-element,
+    nav,
+    footer {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}
