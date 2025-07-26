@@ -87,6 +87,438 @@ html {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
+/* Bento Box Card Styles */
+.benefit-card-bento {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefit-card-bento:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Animated Border Effect */
+.benefit-card-bento::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1.5rem;
+    padding: 2px;
+    background: linear-gradient(45deg, transparent, transparent);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.benefit-card-bento:hover::before {
+    opacity: 1;
+    background: linear-gradient(45deg, 
+        rgba(59, 130, 246, 0.8), 
+        rgba(147, 51, 234, 0.8), 
+        rgba(6, 182, 212, 0.8), 
+        rgba(59, 130, 246, 0.8)
+    );
+    animation: borderRotate 3s linear infinite;
+}
+
+@keyframes borderRotate {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Enhanced icon animations */
+.benefit-card-bento .benefit-icon {
+    transition: all 0.3s ease;
+}
+
+.benefit-card-bento:hover .benefit-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Stats badge animations */
+.benefit-card-bento .benefit-stats {
+    transition: all 0.3s ease;
+}
+
+.benefit-card-bento:hover .benefit-stats {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Bento grid responsive adjustments */
+@media (max-width: 1024px) {
+    .benefits-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .benefit-card-bento {
+        padding: 1.5rem;
+    }
+    
+    .benefit-card-bento:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+}
+
+/* Alternate Bento Box Styles */
+.benefit-card-bento-alt {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefit-card-bento-alt:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Animated Border Effect for Alternate Layout */
+.benefit-card-bento-alt::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1.5rem;
+    padding: 2px;
+    background: linear-gradient(45deg, transparent, transparent);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.benefit-card-bento-alt:hover::before {
+    opacity: 1;
+    background: linear-gradient(45deg, 
+        rgba(59, 130, 246, 0.8), 
+        rgba(147, 51, 234, 0.8), 
+        rgba(6, 182, 212, 0.8), 
+        rgba(59, 130, 246, 0.8)
+    );
+    animation: borderRotate 3s linear infinite;
+}
+
+/* Enhanced icon animations for alternate layout */
+.benefit-card-bento-alt .benefit-icon {
+    transition: all 0.3s ease;
+}
+
+.benefit-card-bento-alt:hover .benefit-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Stats badge animations for alternate layout */
+.benefit-card-bento-alt .benefit-stats {
+    transition: all 0.3s ease;
+}
+
+.benefit-card-bento-alt:hover .benefit-stats {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Alternate bento grid responsive adjustments */
+@media (max-width: 1024px) {
+    .benefits-bento-grid-alt {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefit-card-bento-alt[class*="md:col-span-3"] {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits-bento-grid-alt {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .benefit-card-bento-alt {
+        padding: 1.5rem;
+    }
+    
+    .benefit-card-bento-alt:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+    
+    .benefit-card-bento-alt[class*="md:col-span-3"] {
+        grid-column: span 1;
+    }
+}
+
+/* New Bento Box Styles */
+.benefit-card-bento-new {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefit-card-bento-new:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Animated Border Effect for New Layout */
+.benefit-card-bento-new::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1.5rem;
+    padding: 2px;
+    background: linear-gradient(45deg, transparent, transparent);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.benefit-card-bento-new:hover::before {
+    opacity: 1;
+    background: linear-gradient(45deg, 
+        rgba(59, 130, 246, 0.8), 
+        rgba(147, 51, 234, 0.8), 
+        rgba(6, 182, 212, 0.8), 
+        rgba(59, 130, 246, 0.8)
+    );
+    animation: borderRotate 3s linear infinite;
+}
+
+/* Enhanced icon animations for new layout */
+.benefit-card-bento-new .benefit-icon {
+    transition: all 0.3s ease;
+}
+
+.benefit-card-bento-new:hover .benefit-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Stats badge animations for new layout */
+.benefit-card-bento-new .benefit-stats {
+    transition: all 0.3s ease;
+}
+
+.benefit-card-bento-new:hover .benefit-stats {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* New bento grid responsive adjustments */
+@media (max-width: 1024px) {
+    .benefits-bento-grid-new {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefit-card-bento-new[class*="lg:col-span-3"] {
+        grid-column: span 2;
+    }
+    
+    .benefit-card-bento-new[class*="lg:col-span-2"] {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits-bento-grid-new {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .benefit-card-bento-new {
+        padding: 1.5rem;
+    }
+    
+    .benefit-card-bento-new:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+    
+    .benefit-card-bento-new[class*="lg:col-span-3"],
+    .benefit-card-bento-new[class*="lg:col-span-2"] {
+        grid-column: span 1;
+    }
+}
+
+/* Balanced Bento Box Styles */
+.benefit-card-bento-balanced {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefit-card-bento-balanced:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Animated Border Effect for Balanced Layout */
+.benefit-card-bento-balanced::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1.5rem;
+    padding: 2px;
+    background: linear-gradient(45deg, transparent, transparent);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.benefit-card-bento-balanced:hover::before {
+    opacity: 1;
+    background: linear-gradient(45deg, 
+        rgba(59, 130, 246, 0.8), 
+        rgba(147, 51, 234, 0.8), 
+        rgba(6, 182, 212, 0.8), 
+        rgba(59, 130, 246, 0.8)
+    );
+    animation: borderRotate 3s linear infinite;
+}
+
+/* Enhanced icon animations for balanced layout */
+.benefit-card-bento-balanced .benefit-icon {
+    transition: all 0.3s ease;
+}
+
+.benefit-card-bento-balanced:hover .benefit-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Stats badge animations for balanced layout */
+.benefit-card-bento-balanced .benefit-stats {
+    transition: all 0.3s ease;
+}
+
+.benefit-card-bento-balanced:hover .benefit-stats {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Balanced bento grid responsive adjustments */
+@media (max-width: 1024px) {
+    .benefits-bento-grid-balanced {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits-bento-grid-balanced {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .benefit-card-bento-balanced {
+        padding: 1.5rem;
+    }
+    
+    .benefit-card-bento-balanced:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+}
+
+/* 3-Column Bento Box Styles */
+.benefit-card-bento-3col {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefit-card-bento-3col:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Animated Border Effect for 3-Column Layout */
+.benefit-card-bento-3col::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 1.5rem;
+    padding: 2px;
+    background: linear-gradient(45deg, transparent, transparent);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.benefit-card-bento-3col:hover::before {
+    opacity: 1;
+    background: linear-gradient(45deg, 
+        rgba(59, 130, 246, 0.8), 
+        rgba(147, 51, 234, 0.8), 
+        rgba(6, 182, 212, 0.8), 
+        rgba(59, 130, 246, 0.8)
+    );
+    animation: borderRotate 3s linear infinite;
+}
+
+/* Enhanced icon animations for 3-column layout */
+.benefit-card-bento-3col .benefit-icon {
+    transition: all 0.3s ease;
+}
+
+.benefit-card-bento-3col:hover .benefit-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Stats badge animations for 3-column layout */
+.benefit-card-bento-3col .benefit-stats {
+    transition: all 0.3s ease;
+}
+
+.benefit-card-bento-3col:hover .benefit-stats {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* 3-Column bento grid responsive adjustments */
+@media (max-width: 1024px) {
+    .benefits-bento-grid-3col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .benefit-card-bento-3col[class*="lg:col-span-2"] {
+        grid-column: span 2;
+    }
+    
+    .benefit-card-bento-3col[class*="lg:row-span-2"] {
+        grid-row: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits-bento-grid-3col {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .benefit-card-bento-3col {
+        padding: 1.5rem;
+    }
+    
+    .benefit-card-bento-3col:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+    
+    .benefit-card-bento-3col[class*="lg:col-span-2"],
+    .benefit-card-bento-3col[class*="lg:row-span-2"] {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
 /* Code syntax highlighting colors */
 .code-content {
     color: #e2e8f0;

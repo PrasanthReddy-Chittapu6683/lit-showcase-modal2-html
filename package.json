@@ -1,0 +1,34 @@
+{
+  "name": "lit-showcase-modal2-html",
+  "version": "1.0.0",
+  "description": "LIT Components showcase with modern web component library",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o",
+    "dev": "npx http-server . -p 3000 -o -c-1",
+    "serve": "npx http-server . -p 3000",
+    "build": "echo 'No build step required for static HTML'",
+    "preview": "npx http-server . -p 3000 -o"
+  },
+  "keywords": [
+    "lit",
+    "web-components",
+    "typescript",
+    "tailwind",
+    "html",
+    "showcase"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/lit-showcase-modal2-html.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/lit-showcase-modal2-html/issues"
+  },
+  "homepage": "https://github.com/yourusername/lit-showcase-modal2-html#readme"
+} 
